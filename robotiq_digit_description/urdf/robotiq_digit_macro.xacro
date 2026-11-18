@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Fixed CAD assembly in the supplied Hand-E STEP frame, using metres.
+       No actuator or dynamic inertial properties are invented. -->
+  <xacro:macro name="robotiq_digit_assembly" params="prefix:='' parent:='' xyz:='0 0 0' rpy:='0 0 0' mesh_prefix:='package://robotiq_digit_description/meshes/'">
+    <xacro:if value="${parent != ''}">
+      <joint name="${prefix}hand_e_mount_joint" type="fixed">
+        <parent link="${parent}"/><child link="${prefix}hand_e_base_link"/>
+        <origin xyz="${xyz}" rpy="${rpy}"/>
+      </joint>
+    </xacro:if>
+    <link name="${prefix}hand_e_base_link">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}hand_e.stl" scale="1 1 1"/></geometry>
+        <material name="${prefix}hand_e_base_link_color"><color rgba=".28 .31 .36 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}hand_e.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <link name="${prefix}finger_support_left_link">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}finger_support.stl" scale="1 1 1"/></geometry>
+        <material name="${prefix}finger_support_left_link_color"><color rgba=".65 .69 .75 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}finger_support.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}finger_support_left_link_joint" type="fixed">
+      <parent link="${prefix}hand_e_base_link"/><child link="${prefix}finger_support_left_link"/>
+      <origin xyz="-1e-05 0.0136 0.026514" rpy="0 0 0"/>
+    </joint>
+    <link name="${prefix}digit_adapter_left_link">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit_adapter.stl" scale="1 1 1"/></geometry>
+        <material name="${prefix}digit_adapter_left_link_color"><color rgba=".08 .65 .39 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit_adapter.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}digit_adapter_left_link_joint" type="fixed">
+      <parent link="${prefix}finger_support_left_link"/><child link="${prefix}digit_adapter_left_link"/>
+      <origin xyz="0.00810009979829 0.0065 0.0145" rpy="-1.57079632679 1.57079632679 0"/>
+    </joint>
+    <link name="${prefix}digit_left">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit.STL" scale="1 1 1"/></geometry>
+        <material name="${prefix}digit_left_color"><color rgba=".82 .84 .87 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}collision/digit_hull.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}digit_left_joint" type="fixed">
+      <parent link="${prefix}digit_adapter_left_link"/><child link="${prefix}digit_left"/>
+      <origin xyz="0.00773167147294 0.00808229493791 0.0214651973248" rpy="0 0 0"/>
+    </joint>
+    <link name="${prefix}finger_support_right_link">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}finger_support.stl" scale="1 1 1"/></geometry>
+        <material name="${prefix}finger_support_right_link_color"><color rgba=".65 .69 .75 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}finger_support.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}finger_support_right_link_joint" type="fixed">
+      <parent link="${prefix}hand_e_base_link"/><child link="${prefix}finger_support_right_link"/>
+      <origin xyz="1e-05 0.0136 -0.026514" rpy="3.14159265359 0 3.14159265359"/>
+    </joint>
+    <link name="${prefix}digit_adapter_right_link">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit_adapter.stl" scale="1 1 1"/></geometry>
+        <material name="${prefix}digit_adapter_right_link_color"><color rgba=".08 .65 .39 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit_adapter.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}digit_adapter_right_link_joint" type="fixed">
+      <parent link="${prefix}finger_support_right_link"/><child link="${prefix}digit_adapter_right_link"/>
+      <origin xyz="0.00810009979829 0.0065 0.0145" rpy="-1.57079632679 1.57079632679 0"/>
+    </joint>
+    <link name="${prefix}digit_right">
+      <visual><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}digit.STL" scale="1 1 1"/></geometry>
+        <material name="${prefix}digit_right_color"><color rgba=".82 .84 .87 1"/></material>
+      </visual>
+      <collision><origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry><mesh filename="${mesh_prefix}collision/digit_hull.stl" scale="1 1 1"/></geometry>
+      </collision>
+    </link>
+    <joint name="${prefix}digit_right_joint" type="fixed">
+      <parent link="${prefix}digit_adapter_right_link"/><child link="${prefix}digit_right"/>
+      <origin xyz="0.00773167147294 0.00808229493791 0.0214651973248" rpy="0 0 0"/>
+    </joint>
+    <!-- Tacto's configured gel reference; its normal is local +X. -->
+    <link name="${prefix}digit_left_gel"/>
+    <joint name="${prefix}digit_left_gel_joint" type="fixed">
+      <parent link="${prefix}digit_left"/><child link="${prefix}digit_left_gel"/>
+      <origin xyz="0.022 0 0.015" rpy="0 0 0"/>
+    </joint>
+    <!-- Tacto's configured gel reference; its normal is local +X. -->
+    <link name="${prefix}digit_right_gel"/>
+    <joint name="${prefix}digit_right_gel_joint" type="fixed">
+      <parent link="${prefix}digit_right"/><child link="${prefix}digit_right_gel"/>
+      <origin xyz="0.022 0 0.015" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+</robot>

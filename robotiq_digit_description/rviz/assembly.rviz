@@ -1,0 +1,39 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 34; 40; 49
+    Fixed Frame: hand_e_base_link
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Name: Hand-E with DIGIT
+      Enabled: true
+      Alpha: 1
+      Visual Enabled: true
+      Collision Enabled: false
+      Description Source: Topic
+      Description Topic:
+        Value: /robot_description
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 1
+    - Class: rviz_default_plugins/TF
+      Name: Frames
+      Enabled: false
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 0.28
+      Focal Point:
+        X: 0
+        Y: -0.005
+        Z: 0
+      Pitch: 0.5
+      Yaw: 0.9
+Window Geometry:
+  Width: 1300
+  Height: 900

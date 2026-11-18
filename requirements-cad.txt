@@ -1,0 +1,9 @@
+cadquery==2.8.0
+trimesh==5.2.1
+numpy==2.4.6
+scipy==1.17.1
+networkx==3.6.1
+shapely==2.2.0
+rtree==1.4.1
+xacro==2.1.1
+urdf-parser-py==0.0.4

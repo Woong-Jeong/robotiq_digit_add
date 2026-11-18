@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="robotiq_hand_e_digit" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="mesh_prefix" default="package://robotiq_digit_description/meshes/"/>
+  <xacro:include filename="robotiq_digit_macro.xacro"/>
+  <xacro:robotiq_digit_assembly prefix="$(arg prefix)" mesh_prefix="$(arg mesh_prefix)"/>
+</robot>

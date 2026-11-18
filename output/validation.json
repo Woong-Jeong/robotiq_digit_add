@@ -1,0 +1,401 @@
+{
+  "units": "mm",
+  "source_sha256": {
+    "DIGIT-Robotiq Adapter-2F85-V1.STL": "645533d0dd20f74b18d5e0ce52bd74f7c33a1dd663445ba599628a57937f5458",
+    "HAND_E_FINGER_SUPPORT_20181026-Sep-06-2024-02-31-14-1482-PM.step": "61dbbf9787cd7051c724cd41ad5e50a189f55877c77e4dd846eb7ca59ff27bf5",
+    "ROBOTIQ_HAND-E_NO_FINGERTIPS_20190924-Sep-06-2024-02-31-06-0971-PM.step": "98638237e2004affb0da74b69ce973af765f208c9d6d988832203e7970f503cc"
+  },
+  "base": {
+    "length": 21.5,
+    "width": 20.2,
+    "thickness": 4.0,
+    "clearance_hole_diameter": 3.4,
+    "pattern": [
+      7,
+      12
+    ],
+    "hole_centers_original_stl_xy": [
+      [
+        11.0,
+        2.1000997982919216
+      ],
+      [
+        11.0,
+        14.100099798291922
+      ],
+      [
+        18.0,
+        2.1000997982919216
+      ],
+      [
+        18.0,
+        14.100099798291922
+      ]
+    ]
+  },
+  "adapter_bounds": [
+    -1.0000001098616031e-07,
+    -1.9999003017080832,
+    -0.0022376418059429806,
+    21.500000100000015,
+    18.20009989829193,
+    22.00000010000001
+  ],
+  "adapter_volume_mm3": 3974.009145513544,
+  "protected_region": "Original STL z >= 4.0 mm, including the complete DIGIT mounting geometry",
+  "protected_region_removed_mm3": 0,
+  "protected_region_added_mm3": 0,
+  "adapter_stl_watertight": true,
+  "adapter_stl_single_component": true,
+  "adapter_step_valid": true,
+  "clearance_hole_axis_errors_mm": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "head_envelope_intersections_mm3": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "assembly_pairwise_intersections_mm3": {
+    "hand_e__finger_support_left": 0,
+    "hand_e__finger_support_right": 0,
+    "hand_e__digit_adapter_left": 0,
+    "hand_e__digit_adapter_right": 0,
+    "finger_support_left__finger_support_right": 0,
+    "finger_support_left__digit_adapter_left": 0,
+    "finger_support_left__digit_adapter_right": 0,
+    "finger_support_right__digit_adapter_left": 0,
+    "finger_support_right__digit_adapter_right": 0,
+    "digit_adapter_left__digit_adapter_right": 0
+  },
+  "assembly_bounds": [
+    [
+      -37.500002490084825,
+      -91.00000000000001,
+      -41.013999999999996
+    ],
+    [
+      37.50000000000001,
+      42.1,
+      41.013999999999996
+    ]
+  ],
+  "adapter_to_support": [
+    [
+      0.0,
+      -1.0,
+      0.0,
+      8.100099798291922
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      6.5
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0,
+      14.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_to_gripper_cad_transforms_mm": {
+    "hand_e": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "finger_support_left": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.01
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        13.6
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        26.514
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "finger_support_right": [
+      [
+        -1.0,
+        0.0,
+        0.0,
+        0.01
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        13.6
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -26.514
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "digit_adapter_left": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        8.090099798291922
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        20.1
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0,
+        41.013999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "digit_adapter_right": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        -8.090099798291922
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        20.1
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        -41.013999999999996
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "digit_left": [
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.007804860379868828
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        41.56519732475281
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0,
+        33.2823285270618
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "digit_right": [
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.007804860379868828
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        41.56519732475281
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        -33.2823285270618
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "gripper_reference_pose": "Unchanged supplied STEP pose; no jaw displacement applied",
+  "sensor_body_included": true,
+  "limitations": [
+    "No fabricated hardware or load testing performed.",
+    "Threads are simplified in source STEP; confirm actual hardware.",
+    "Fixed assembly model; no actuator, mass or inertia values are inferred.",
+    "DIGIT cables and added mounting screws are not modeled.",
+    "Original Tacto visual mesh contains open internal surfaces; kept unchanged."
+  ],
+  "sensor_source": {
+    "repository": "https://github.com/facebookresearch/tacto",
+    "commit": "a21d0c4626d74a546d94859226c2fea348babb6a",
+    "requested_directory": "https://github.com/facebookresearch/tacto/tree/main/meshes"
+  },
+  "sensor_sha256": "7ea789c949a371d68b2e8b33cc1c999bc495680b15c5f84a3765aec5f96c9f06",
+  "sensor_to_adapter_transform_mm": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      7.7316714729381975
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      8.082294937912053
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      21.465197324752808
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "sensor_mount_axis_errors_mm": [
+    7.1998170735399645e-06,
+    7.199817074427633e-06
+  ],
+  "sensor_aabb_clearance_or_contact_mm": {
+    "digit_left__hand_e": 27.499999618530275,
+    "digit_left__finger_support_left": 21.999999618530275,
+    "digit_left__finger_support_right": 32.16033905336128,
+    "digit_left__digit_adapter_left": 1.5258789076710855e-06,
+    "digit_left__digit_adapter_right": 32.66033905336128,
+    "digit_left__digit_right": 26.292678228792866,
+    "digit_right__hand_e": 27.499999618530275,
+    "digit_right__finger_support_left": 32.16033905336128,
+    "digit_right__finger_support_right": 21.999999618530275,
+    "digit_right__digit_adapter_left": 32.66033905336128,
+    "digit_right__digit_adapter_right": 1.5258789076710855e-06,
+    "digit_right__digit_left": 26.292678228792866
+  },
+  "sensor_left_gel_normal_cad": [
+    0.0,
+    0.0,
+    -1.0
+  ],
+  "sensor_right_gel_normal_cad": [
+    0.0,
+    0.0,
+    1.0
+  ],
+  "sensor_mesh_watertight_upstream": false,
+  "sensor_collision_mesh": "Watertight convex hull of upstream DIGIT mesh",
+  "assembly_bounds_with_sensors_mm": [
+    [
+      -37.500003814697266,
+      -91.0,
+      -45.47393800654874
+    ],
+    [
+      37.5,
+      76.11650488376617,
+      45.47393800654874
+    ]
+  ],
+  "urdf_forward_kinematics_bounds_errors_mm": {
+    "hand_e": 1.8477439880371094e-06,
+    "finger_support_left": 6.46114351354754e-07,
+    "digit_adapter_left": 6.692098786231782e-07,
+    "digit_left": 3.100844025993865e-10,
+    "finger_support_right": 6.46114351354754e-07,
+    "digit_adapter_right": 6.692084966175571e-07,
+    "digit_right": 3.2011726602831914e-10
+  },
+  "urdf_link_count": 9,
+  "urdf_joint_count": 8,
+  "urdf_joint_type": "fixed",
+  "urdf_mesh_units": "m",
+  "package_checks": {
+    "portable_mesh_paths": true,
+    "xacro_parent_prefix_integration": true,
+    "source_files_unchanged": true,
+    "package_xml_parse": true,
+    "launch_python_syntax": true,
+    "ros2_runtime_tested": false
+  }
+}
